@@ -1,10 +1,17 @@
 :root {
-  --main-font: "Inter", sans-serif;
-  --accent-font: "PressStart2P", cursive;
-  --text-weight: 410;
-  --title-weight: 715;
-  --page-bg: 
+  --bg-page: 
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --bg-color: #FFFFFF; 
+  --main-color: #000000;
+  --accent-color: #ff0000;
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", cursive;
+  --main-font-weight: 410;
+  --main-title-weight: 715;
+  --accent-font-weight: 400;
+  --main-text-size: 18px;
+  --header-logo-size: clamp(3.06rem, 2.777rem + 1.429vw, 4.06rem);    
+  --header-subtitle-size: clamp(0.88rem, calc(0.714rem + 0.804vw), 1.44rem); 
 }
