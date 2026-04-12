@@ -23,41 +23,6 @@
         <h1 class="header__logo">&lt;/HTML&gt;</h1>
         <p class="header__subtitle">закрывающий тег</p>
       </div>
-      <div class="header__rec">
-        <span class="visually-hidden">Режим записи</span>
-      </div>
-      <nav class="theme-menu">
-        <ul class="theme-menu__list">
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              class="theme-menu__button"
-              aria-pressed="false"
-            >
-              светло
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              class="theme-menu__button theme-menu__button_active"
-              aria-pressed="true"
-              disabled
-            >
-              авто
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              class="theme-menu__button"
-              aria-pressed="false"
-            >
-              темно
-            </button>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main>
       <div class="post-list">
@@ -67,11 +32,12 @@
           </h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/intro.png"
-              alt="Обычный пиксельный фургон"
-              class="post__image"
+              src="./images/curiosity.jpg"
+              alt="Девушка за рабочим столом с ноутбуком и двумя котами"
+              class="post__image image-filter-blur"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true"
+              >&lt;/любопытство&gt;</span
             >
           </div>
           <div class="post__content">
@@ -81,23 +47,23 @@
               знания могут повлиять на ваше будущее.
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний о начале обучения.
+              Открывая первый урок, я очень надеялась, что любопытство меня не
+              сгубит, а поможет разобраться в этом бесконечном мире кода.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -105,11 +71,12 @@
           <h2 class="post__title">1 спринт: Я — чистый лист</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/clean-slate.png"
-              alt="Обычный пиксельный фургон с пониженной насыщенностью"
-              class="post__image"
+              src="./images/confusion.jpg"
+              alt="Иллюстрация открытого ноутбука, из которого вылетают иконки языков программирования"
+              class="post__image image-filter-sepia"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true"
+              >&lt;/растерянность&gt;</span
             >
           </div>
           <div class="post__content">
@@ -121,31 +88,36 @@
               начать? а вдруг будет слишком сложно? что, если я не справлюсь?
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний о начале первого спринта.
+              В голове был полный хаос от обилия новых терминов. Казалось, что
+              этот поток информации просто невозможно систематизировать.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button type="button" class="button post__like-button">Like</button>
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
+            </button>
           </div>
         </article>
         <article class="post">
           <h2 class="post__title">1 спринт: А если не получится?</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/what-if.png"
-              alt="Обычный пиксельный фургон с повышенной насыщенностью"
-              class="post__image"
+              src="./images/doubt.jpg"
+              alt="Маленькая фигурка девушки в углу комнаты, отбрасывающая огромную тень супергероини на стену"
+              class="post__image image-filter-grayscale"
             />
             <span class="post__watermark" aria-hidden="true"
-              >&lt;/HTML&gt;</span
+              >&lt;/сомнение&gt;</span
             >
           </div>
           <div class="post__content">
@@ -155,23 +127,25 @@
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний об окончании первого спринта.
+              Смотря на сложные макеты, я чувствовала себя совсем крошечной.
+              Казалось, что верстка — это для титанов, а не для меня. Но внутри
+              всё равно жила надежда, что однажды я вырасту до размеров своей
+              тени и стану настоящим профи.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -179,11 +153,12 @@
           <h2 class="post__title">2 спринт: Погоня за идеалом</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/perfectionism.png"
-              alt="Пиксельный фургон с эффектом цифровых помех (глитч)"
-              class="post__image"
+              src="./images/standard.jpg"
+              alt="Аккуратная, структурированная схема слоев веб-разработки: HTML, CSS и JavaScript"
+              class="post__image image-filter-brightness"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true"
+              >&lt;/стандарт&gt;</span
             >
           </div>
           <div class="post__content">
@@ -195,23 +170,25 @@
               старались просто сделать.
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний о начале второго спринта.
+              Для меня важно не просто "сделать", а сделать правильно. Я не
+              гонюсь за недостижимым идеалом, но и не принимаю халтуру. Мой путь
+              — это изучение правил и их четкое выполнение. Если я знаю, как
+              должен выглядеть идеальный код по стандарту, я сделаю именно так.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -219,11 +196,11 @@
           <h2 class="post__title">2 спринт: О тех, кто рядом</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/team.png"
-              alt="Инвертированный пиксельный фургон"
-              class="post__image"
+              src="./images/team.jpg"
+              alt="Силуэты людей, удерживающих платформу, чтобы другие могли пройти над пропастью"
+              class="post__image image-filter-hue-rotate"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true">&lt;/команда&gt;</span
             >
           </div>
           <div class="post__content">
@@ -236,23 +213,25 @@
               единомышленники, не правда ли?
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний об окончании второго спринта.
+              Когда мне казалось, что я застряла перед пропастью из багов,
+              именно поддержка наставников и ребят из группы стала тем самым
+              мостом. Оказалось, что в одиночку идти трудно, а вместе — любая
+              высота достижима.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -260,11 +239,12 @@
           <h2 class="post__title">3 спринт: Обходные стратегии</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/strategies.png"
-              alt="Черно-белый пиксельный фургон"
-              class="post__image"
+              src="./images/flexibility.jpg"
+              alt="Девушка рисует извилистую дорогу как символ нестандартного решения"
+              class="post__image image-filter-complex"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true"
+              >&lt;гибкость&gt;</span
             >
           </div>
           <div class="post__content">
@@ -274,23 +254,26 @@
               время посмотреть на задачу под другим углом.
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний о начале третьего спринта.
+              Но даже следуя строгим правилам, я поняла: иногда прямой путь — не
+              самый эффективный. Существуют "обходные пути" и нестандартные
+              приемы, которые не нарушают стандарты, а делают код изящнее. Для
+              меня это стало открытием — возможность быть гибкой, оставаясь при
+              этом верной качеству.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -298,11 +281,11 @@
           <h2 class="post__title">3 спринт: Когда опускаются руки</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/burnout.png"
-              alt="Обычный пиксельный фургон с повышенным размытием"
-              class="post__image"
+              src="./images/system.jpg"
+              alt="Идеально организованное рабочее место"
+              class="post__image image-filter-saturate"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true">&lt;/система&gt;</span
             >
           </div>
           <div class="post__content">
@@ -314,23 +297,24 @@
               откуда вы её черпали.
             </p>
             <p class="post__text">
-              Место для ваших воспоминаний об окончании третьего спринта.
+              Для меня учёба — это не хаос, за который нужно хвататься, а чётко выстроенный график.
+              Я не теряю концентрацию, потому что сам процесс решения задач и изучения теории приносит мне удовольствие.
+              Мой ресурс — в порядке: когда всё расписано и дела идут по плану, я просто получаю кайф от того, как проект собирается в единое целое.
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -338,11 +322,11 @@
           <h2 class="post__title">«Сейчас я здесь»</h2>
           <div class="post__image-wrapper">
             <img
-              src="./images/final.png"
-              alt="Пиксельный фургон с фильтром синяя слепота"
-              class="post__image"
+              src="./images/perspective.jpg"
+              alt="Фантастический поток цифровых знаний из экрана ноутбука"
+              class="post__image image-filter-cosmic"
             />
-            <span class="post__watermark" aria-hidden="true">&lt;/HTML&gt;</span
+            <span class="post__watermark" aria-hidden="true">&lt;/перспектива&gt;</span
             >
           </div>
           <div class="post__content">
@@ -355,24 +339,25 @@
               Ведь часто путь — и есть результат.
             </p>
             <p class="post__text">
-              Место, чтобы остановиться, подумать и написать, что вы чувствуете
-              в этой точке пути.
+              Понять всё — невозможно, но пробовать — невероятно круто.
+              Я выбираю не гнаться за финальной точкой, а ловить поток: спокойно изучать новое,
+              решать задачи и просто получать удовольствие от того, как растёт моё мастерство.
+              Путешествие только начинается. 
             </p>
           </div>
           <div class="post__buttons">
             <button
               type="button"
-              class="post__heart-button"
+              class="button card__icon-button"
               aria-pressed="false"
             >
-              <svg aria-hidden="true" focusable="false">...</svg>
+              <svg class="like-icon" aria-hidden="true" focusable="false">
+                ...
+              </svg>
               <span class="visually-hidden">Поставить лайк</span>
             </button>
-            <button
-              type="button"
-              class="button post__like-button"
-            >
-              Like
+            <button type="button" class="button card__like-button">
+              <span class="button__text">Like</span>
             </button>
           </div>
         </article>
@@ -386,6 +371,19 @@
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
+    <dialog class="button dialog">
+      <div class="dialog__content">
+        <svg class="dialog__icon" aria-hidden="true">
+          <use href="./svg/sprite.svg#floppy"></use>
+        </svg>
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+      </div>
+      <form method="dialog">
+        <button class="button dialog__close-button">
+          <span class="button__text">ОК</span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

@@ -1,17 +1,24 @@
 :root {
-  --bg-page: 
+  --bg-page:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  --bg-color: #FFFFFF; 
+    linear-gradient(to bottom,#e7e7e7 0.01%, #1a1a1a 100%);
+  --bg-color: #ffffff;
   --main-color: #000000;
   --accent-color: #ff0000;
+  --stroke-color: var(--bg-color);
   --main-font: "Inter", sans-serif;
   --accent-font: "PressStart2P", cursive;
   --main-font-weight: 410;
   --main-title-weight: 715;
   --accent-font-weight: 400;
   --main-text-size: 18px;
-  --header-logo-size: clamp(3.06rem, 2.777rem + 1.429vw, 4.06rem);    
-  --header-subtitle-size: clamp(0.88rem, calc(0.714rem + 0.804vw), 1.44rem); 
+  --header-logo-size: clamp(3.06rem, calc(2.71rem + 1.502vw), 4.06rem);
+  --header-subtitle-size: clamp(0.88rem, calc(0.677rem + 0.845vw), 1.44rem);
+  --page-padding-block: 100px;
+  --page-padding-inline: clamp(0rem, calc(-8.143rem + 34.742vw), 23.125rem);
+  --header-min-block-size: clamp(20.438rem, calc(19.535rem + 3.85vw), 23rem);
+  --header-margin-bottom: clamp(6.25rem, calc(6.419rem - 0.188vw), 6.375rem);
+  --padding-vertical: clamp(7.625rem, calc(7.449rem + 0.751vw), 8.125rem);
+  --padding-horizontal: clamp(1rem, calc(-1.344rem + 10vw), 7.656rem);
 }
