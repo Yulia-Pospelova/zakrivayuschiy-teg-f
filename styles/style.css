@@ -1,7 +1,3 @@
-/* 
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -91,6 +87,7 @@
   text-shadow:
     0 0 1px var(--stroke-color),
     0 0 1px var(--stroke-color);
+  filter: contrast(1.5) brightness(1.2);
 }
 
 @supports (
@@ -121,10 +118,12 @@
   justify-content: flex-end;
   margin-block-end: 25px;
   margin-inline-end: 25px;
-  gap: 12px;
+  gap: 6px;
 }
 
 .button {
+  position: relative;
+  z-index: 0;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
   font-family: var(--accent-font);
@@ -132,24 +131,40 @@
   font-weight: var(--accent-font-weight);
   line-height: 0.9;
   cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
   background: transparent;
-  border: none;
-  inline-size: 27px;
-  block-size: 24px;
+  border: 2px solid transparent;
+  inline-size: 38px;
+  block-size: 38px;
+  transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .like-icon {
-  inline-size: 100%;
-  block-size: 100%;
+  display: block;
+  inline-size: 38px;
+  block-size: 38px;
   flex-shrink: 0;
+  transform-origin: center;
+}
+
+.like-icon .sparks {
+  opacity: 0;
 }
 
 .card__like-button {
   inline-size: 130px;
   block-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-filter-blur {
@@ -208,16 +223,13 @@
   flex-shrink: 0;
 }
 
-.button__text {
-  white-space: nowrap;
-}
-
 .dialog {
   display: none;
   position: fixed;
   inset: 0;
   inline-size: clamp(21.313rem, calc(21.048rem + 1.127vw), 22.063rem);
-  padding: 30px 40px;
+  padding: 28px 38px;
+  border: 2px solid var(--main-color);
 }
 
 .dialog[open] {
@@ -231,6 +243,10 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: var(--accent-font-weight);
+  line-height: 1.5;
 }
 
 .dialog__icon {
@@ -254,9 +270,46 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
+.button:not(.card__icon-button):focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.button:not(.card__icon-button)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--main-color);
+  transform: translate(-100%, -10%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:not(.card__icon-button):hover::before {
+  transform: translate(0, 0);
+}
+
+.button__text,
+.footer__save-icon {
+  color: var(--bg-color);
+  mix-blend-mode: difference;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--main-color);
+}
+
 @media (width <= 375px) {
   .header__logo {
     font-size: clamp(2.5rem, calc(2rem + 2vw), 3.06rem);
+  }
+
+  .post__image {
+    object-position: 35% center;
   }
 }
 
@@ -274,6 +327,6 @@
 
   .dialog {
     max-inline-size: 353px;
-    padding: 30px;
+    padding: 28px;
   }
 }
