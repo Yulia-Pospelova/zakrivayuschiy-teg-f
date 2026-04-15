@@ -1,6 +1,6 @@
-const likeHeartArray = document.querySelectorAll('.like-icon');
-const likeButtonArray = document.querySelectorAll('.card__like-button');
-const iconButtonArray = document.querySelectorAll('.card__icon-button');
+const likeHeartArray = document.querySelectorAll(".like-icon");
+const likeButtonArray = document.querySelectorAll(".card__like-button");
+const iconButtonArray = document.querySelectorAll(".card__icon-button");
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
@@ -12,27 +12,27 @@ likeButtonArray.forEach((button, index) => {
 });
 
 function toggleIsLiked(heart, button) {
-  heart.classList.toggle('is-liked');
+  heart.classList.toggle("is-liked");
   setButtonText(heart, button);
 }
 
 function setButtonText(heart, button) {
-  if ([...heart.classList].includes('is-liked')) {
+  if ([...heart.classList].includes("is-liked")) {
     setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Unlike'),
-      500
+      () => (button.querySelector(".button__text").textContent = "Unlike"),
+      500,
     );
   } else {
     setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Like'),
-      500
+      () => (button.querySelector(".button__text").textContent = "Like"),
+      500,
     );
   }
 }
 
-const saveButton = document.querySelector('.footer__save-button');
-const dialog = document.querySelector('.dialog');
-const closeButton = document.querySelector('.dialog__close-button');
+const saveButton = document.querySelector(".footer__save-button");
+const dialog = document.querySelector(".dialog");
+const closeButton = document.querySelector(".dialog__close-button");
 
 if (saveButton && dialog) {
   saveButton.onclick = () => {

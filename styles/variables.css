@@ -2,10 +2,10 @@
   --bg-page:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom,#e7e7e7 0.01%, #1a1a1a 100%);
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   --bg-color: #ffffff;
   --main-color: #000000;
-  --contour-color: var(--main-color); 
+  --contour-color: var(--main-color);
   --animation-fill-color: #ff0000;
   --stroke-color: var(--bg-color);
   --main-font: "Inter", sans-serif;
