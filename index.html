@@ -100,7 +100,7 @@
           <div class="post__image-wrapper">
             <img
               src="./images/confusion.jpg"
-              alt="Иллюстрация открытого ноутбука, из которого вылетают иконки языков программирования"
+              alt="Иконки языков программирования, вылетающие из ноутбука"
               class="post__image image-filter-sepia"
             />
             <span class="post__watermark" aria-hidden="true"
@@ -238,7 +238,7 @@
           <div class="post__image-wrapper">
             <img
               src="./images/standard.jpg"
-              alt="Аккуратная, структурированная схема слоев веб-разработки: HTML, CSS и JavaScript"
+              alt="Схема слоёв веб-разработки: HTML, CSS и JavaScript"
               class="post__image image-filter-brightness"
             />
             <span class="post__watermark" aria-hidden="true"
@@ -381,7 +381,7 @@
           <div class="post__image-wrapper">
             <img
               src="./images/flexibility.jpg"
-              alt="Девушка рисует извилистую дорогу как символ нестандартного решения"
+              alt="Девушка рисует извилистую дорогу"
               class="post__image image-filter-complex"
             />
             <span class="post__watermark" aria-hidden="true"
@@ -451,7 +451,7 @@
           <div class="post__image-wrapper">
             <img
               src="./images/system.jpg"
-              alt="Идеально организованное рабочее место"
+              alt="Рабочий стол с монитором, упорядоченными папками и канцелярией"
               class="post__image image-filter-saturate"
             />
             <span class="post__watermark" aria-hidden="true"
@@ -524,7 +524,7 @@
           <div class="post__image-wrapper">
             <img
               src="./images/perspective.jpg"
-              alt="Фантастический поток цифровых знаний из экрана ноутбука"
+              alt="Поток цифровых элементов из экрана ноутбука"
               class="post__image image-filter-cosmic"
             />
             <span class="post__watermark" aria-hidden="true"
@@ -601,15 +601,15 @@
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
-    <dialog class="dialog">
+    <dialog class="dialog" aria-labelledby="dialog-title">
       <div class="dialog__content">
         <svg class="dialog__icon" aria-hidden="true">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
-        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        <p id="dialog-title" class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
       <form method="dialog">
-        <button class="button dialog__close-button">
+        <button class="button dialog__close-button" type="submit">
           <span class="button__text">ОК</span>
         </button>
       </form>

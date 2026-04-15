@@ -68,10 +68,11 @@
 
 .post__image {
   inline-size: 100%;
-  block-size: clamp(23.188rem, calc(16.035rem + 30.516vw), 43.5rem);
+  block-size: clamp(23.438rem, calc(16.285rem + 30.516vw), 43.75rem);
   border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
   object-fit: cover;
+  object-position: 35% center;
 }
 
 .post__watermark {
@@ -203,7 +204,7 @@
   display: flex;
   justify-content: center;
   margin-block-start: 50px;
-  margin-inline: 34.5px;
+  margin-inline: clamp(2.156rem, calc(-1.101rem + 13.897vw), 11.406rem);
 }
 
 .footer__save-button {
@@ -212,9 +213,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-inline-size: 306px;
-  min-block-size: 84px;
-  padding: 15px 20px;
+  inline-size: 306px;
+  block-size: 84px;
 }
 
 .footer__save-icon {
@@ -289,10 +289,10 @@
   transform: translate(0, 0);
 }
 
-.button__text,
-.footer__save-icon {
-  color: var(--bg-color);
+.button:hover .button__text,
+.button:hover .footer__save-icon {
   mix-blend-mode: difference;
+  color: var(--bg-color);
 }
 
 .card__icon-button:focus {
@@ -303,21 +303,17 @@
   border-color: var(--main-color);
 }
 
-@media (width <= 375px) {
+@media (width < 375px) {
   .header__logo {
     font-size: clamp(2.5rem, calc(2rem + 2vw), 3.06rem);
-  }
-
-  .post__image {
-    object-position: 35% center;
   }
 }
 
 @media (width >= 1024px) {
   .footer__save-button {
     flex-direction: row;
-    min-inline-size: 335px;
-    min-block-size: 55px;
+    inline-size: 335px;
+    block-size: 55px;
   }
 
   .footer__save-icon {
