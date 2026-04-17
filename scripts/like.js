@@ -30,7 +30,7 @@ function setButtonText(heart, button) {
   }
 }
 
-const saveButton = document.querySelector(".footer__save-button");
+const saveButton = document.querySelector(".save-button");
 const dialog = document.querySelector(".dialog");
 const closeButton = document.querySelector(".dialog__close-button");
 

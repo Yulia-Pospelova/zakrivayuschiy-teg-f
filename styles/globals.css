@@ -19,8 +19,14 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+figure {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
