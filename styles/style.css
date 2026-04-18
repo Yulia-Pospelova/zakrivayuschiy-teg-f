@@ -157,6 +157,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  overflow: visible;
 }
 
 .like-icon {
@@ -164,6 +165,7 @@
   inline-size: 38px;
   block-size: 38px;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .heart {
@@ -235,7 +237,9 @@
   display: none;
   position: fixed;
   inset: 0;
-  inline-size: 341px;
+  inline-size: calc(100% - 34px);
+  max-inline-size: 353px;
+  block-size: 191px;
   padding: 28px 38px;
   border: 2px solid var(--main-color);
 }
@@ -269,7 +273,7 @@
 }
 
 .dialog__close-button {
-  min-inline-size: clamp(16.313rem, calc(15.608rem + 3.005vw), 18.313rem);
+  inline-size: clamp(16.313rem, calc(15.608rem + 3.005vw), 18.313rem);
   min-block-size: 38px;
   text-transform: uppercase;
 }
@@ -315,6 +319,10 @@
   .header__logo {
     font-size: clamp(2.5rem, calc(2rem + 2vw), 3.06rem);
   }
+
+  .dialog {
+    padding: 28px 10px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -330,7 +338,6 @@
   }
 
   .dialog {
-    inline-size: 353px;
     padding: 28px;
   }
 }
