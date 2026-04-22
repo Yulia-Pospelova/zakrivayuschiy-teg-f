@@ -17,16 +17,18 @@ function toggleIsLiked(heart, button) {
 }
 
 function setButtonText(heart, button) {
+  const textElement = button.querySelector(".button__text");
+
   if ([...heart.classList].includes("is-liked")) {
-    setTimeout(
-      () => (button.querySelector(".button__text").textContent = "Unlike"),
-      500,
-    );
+    setTimeout(() => {
+      textElement.textContent = "Unlike";
+      button.setAttribute("aria-label", "Убрать лайк");
+    }, 500);
   } else {
-    setTimeout(
-      () => (button.querySelector(".button__text").textContent = "Like"),
-      500,
-    );
+    setTimeout(() => {
+      textElement.textContent = "Like";
+      button.setAttribute("aria-label", "Поставить лайк");
+    }, 500);
   }
 }
 
